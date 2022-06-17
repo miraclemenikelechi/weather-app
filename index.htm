@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weather app</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./img/sunshine.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.5/css/unicons.css">
+</head>
+
+<body>
+    <div class="notification hide hideAlert">
+        <i class="uil uil-info-circle"></i>
+        <span>requesting device location...</span>
+    </div>
+    <div class="container">
+        <div class="search">
+            <input type="text" class="search-bar" placeholder="get device location >>">
+            <button><i class="uil uil-search-alt"></i></i></button>
+        </div>
+        <div class="date"></div>
+        <div class="weather">
+            <span class="big-icon"><i class="uil uil-n-a"></i></span>
+            <div class="temperature">
+                <span class="number">-</span><span class="degree">°</span><span>C</span>
+            </div>
+            <div class="description">-</div>
+            <div class="location-container">
+                <span class="icon"><i class="uil uil-location-pin-alt"></i></span>
+                <span class="location">--</span>
+            </div>
+            <div class="bottom">
+                <div class="humidity-container">
+                    <i class="uil uil-raindrops-alt"></i>
+                    <div class="humidity"><span class="number">-</span></div>
+                    <p>humidity</p>
+                </div>
+                <div class="feels-container">
+                    <i class="uil uil-temperature-half"></i>
+                    <div class="feels"><span class="number">-</span></div>
+                    <p>feels like</p>
+                </div>
+                <div class="wind-container">
+                    <i class="uil uil-wind"></i>
+                    <div class="wind"><span class="number">-</span></div>
+                    <p>wind speed</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/config.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
