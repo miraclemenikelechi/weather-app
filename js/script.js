@@ -1,4 +1,4 @@
-const myKey = config.API_KEY,
+const myKey = "13cd84c906da5d3f9680234220331d6b",
     notification = document.querySelector(".notification span"),
     searchButton = document.querySelector(".search button"),
     search = document.querySelector(".search-bar"),
