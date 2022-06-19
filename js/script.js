@@ -1,7 +1,8 @@
 const myKey = "13cd84c906da5d3f9680234220331d6b",
     notification = document.querySelector(".notification span"),
     searchButton = document.querySelector(".search button"),
-    search = document.querySelector(".search-bar"),
+    search = document.querySelector(".search-box"),
+    clear = document.querySelector(".search-bar i"),
     date = document.querySelector(".date"),
     temperature = document.querySelector(".temperature .number"),
     userLocation = document.querySelector(".location"),
@@ -64,6 +65,22 @@ const today = new Date(),
     todaysDate = monthOfYear + " " + dayOfMonth + ", " + year;
 date.textContent = todaysDate;
 
+// clear search button
+search.onkeyup = () => {
+    if (search.value !== "") {
+        clear.classList.remove("clear");
+    } else {
+        clear.classList.add("clear");
+    }
+};
+
+clear.onclick = () => {
+    if (search.value !== "") {
+        search.value = "";
+        clear.classList.add("clear");
+    }
+};
+
 // get location of user
 searchButton.addEventListener("click", () => {
     if (search.value === "") {
@@ -103,6 +120,7 @@ const findCity = (city) => {
     fetchWeather();
 };
 
+// process weather information
 const weatherDetails = (info) => {
     if (info.cod == "404") {
         invalid();

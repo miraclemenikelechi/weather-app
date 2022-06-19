@@ -12,7 +12,7 @@ body {
     align-items: center;
     height: 100vh;
     background: rgb(51, 51, 51, );
-    background-image: url("https://source.unsplash.com/collection/220381/2400x1600");
+    /* background-image: url("https://source.unsplash.com/collection/220381/2400x1600"); */
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -55,21 +55,43 @@ body {
     transition: 0.2s ease-in-out;
 }
 
+.search-box {
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    border: none;
+    background: inherit;
+    outline: none;
+    padding: 5px 10px;
+    font-family: inherit;
+    font-size: 140%;
+    text-transform: capitalize;
+}
+
 .search-bar:hover {
-    background: rgb(133, 117, 78);
+    background: rgb(85, 107, 47);
+}
+
+.search-bar i.clear {
+    display: none;
 }
 
 .search-bar {
     width: calc(100% - 60px);
+    background: rgb(84, 90, 44);
     height: 3rem;
     border-radius: 5px;
     border: none;
-    background: rgba(84, 90, 44, 0.8);
     outline: none;
-    padding: 5px 10px;
-    font-family: inherit;
-    font-size: 120%;
-    transition: 0.2s ease-in-out;
+    display: flex;
+    transition: 0.1s ease-in-out;
+}
+
+.search-bar i {
+    position: relative;
+    display: block;
+    top: 10px;
+    font-size: 2rem;
 }
 
 .date {
